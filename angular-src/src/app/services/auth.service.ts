@@ -14,8 +14,9 @@ export class AuthService {
 
   constructor(private http: Http) { }
 
-  uri = 'http://localhost:8080/';  //Local URI
-  //uri = '';  //Prod  URI 
+  //uri = 'http://localhost:3000/';  //Local URI
+  //uri = 'http://localhost:3000/';  //Local Prod
+  uri = '';  //Prod/Heroku  URI 
 
   registerUser(user){
     let headers = new Headers();
