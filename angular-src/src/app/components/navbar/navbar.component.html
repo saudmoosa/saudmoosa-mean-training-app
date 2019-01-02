@@ -16,7 +16,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
           <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
-              <a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a>
+              <a class="nav-link" [routerLink]="['/dashboard']" data-toggle="collapse" data-target="#myNavbar">Dashboard</a>
             </li>
             <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
               <a class="nav-link" [routerLink]="['/profile']">Profile</a>
