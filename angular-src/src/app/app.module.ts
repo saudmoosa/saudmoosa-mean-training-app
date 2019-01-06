@@ -5,6 +5,14 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatToolbarModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule, MatIconModule, MatButtonModule, MatCardModule, MatDividerModule, MatSnackBarModule } from '@angular/material';
+import { MatTableModule } from '@angular/material';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatTableDataSource } from '@angular/material';
+import { DataSource } from '@angular/cdk/table';
+
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
@@ -18,12 +26,22 @@ import { NgFlashMessagesModule } from 'ng-flash-messages';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 
+import { CreateComponent } from './components/create/create.component';
+import { ListComponent } from './components/list/list.component';
+import { EditComponent } from './components/edit/edit.component';
+import { IssueService } from './services/issue.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]}
+  {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]},
+  { path: 'create', component: CreateComponent, canActivate:[AuthGuard]},
+  { path: 'edit/:id', component: EditComponent, canActivate:[AuthGuard]},
+  { path: 'list', component: ListComponent, canActivate:[AuthGuard]},
+  { path: '**', redirectTo: ''}
 ]
 
 @NgModule({
@@ -34,7 +52,10 @@ const appRoutes: Routes = [
     RegisterComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateComponent,
+    ListComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +63,23 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    NgFlashMessagesModule.forRoot()
+    NgFlashMessagesModule.forRoot(),
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatOptionModule, 
+    MatSelectModule, 
+    MatIconModule, 
+    MatButtonModule, 
+    MatCardModule, 
+    MatDividerModule, 
+    MatSnackBarModule,
+    ReactiveFormsModule,
+    CdkTableModule    
   ],
-  providers: [ValidateService, AuthService, AuthGuard],
+  providers: [ValidateService, AuthService, AuthGuard, IssueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

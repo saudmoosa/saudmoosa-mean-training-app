@@ -4,6 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const User = require('../models/user');
+const Issue = require('../models/issue');
 
 //Register
 router.post('/register', (req, res, next) => {
@@ -61,6 +62,69 @@ router.post('/authenticate', (req, res, next) => {
 //Profile
 router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
     res.json({user: req.user});
+});
+
+// All Issues
+router.get('/issues', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+    Issue.find((err, issues) => {
+        if (err)
+            console.log(err);
+        else
+            res.json(issues);
+    });
+});
+
+// Get Issue by Id
+router.get('/issues/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
+    Issue.findById(req.params.id, (err, issue) => {
+        if (err)
+            console.log(err);
+        else
+            res.json(issue);
+    });
+});
+
+// Add Issue
+router.post('/issues/add', passport.authenticate('jwt', {session: false}), (req, res) => {
+    let issue = new Issue(req.body);
+    issue.save()
+        .then(issue => {
+            res.status(200).json({'issue': 'Added successfuly'});
+        })
+        .catch(err => {
+            res.status(400).send('Failed to create new record');
+        });
+    });
+
+// Update Issue
+router.post('/issues/update/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
+    Issue.findById(req.params.id, (err, issue) => {
+        if (!issue)
+            return next(new Error('Could not load document'));
+        else {
+            issue.title = req.body.title;
+            issue.responsible = req.body.responsible;
+            issue.description = req.body.description;
+            issue.severity = req.body.severity;
+            issue.status = req.body.status;
+            
+            issue.save().then(issue => {
+                res.json('Update done');
+            }).catch(err => {
+                res.status(400).send('Update failed');
+            });
+        }
+    });
+});
+
+// Delete Issue
+router.get('/issues/delete/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
+    Issue.findByIdAndRemove({_id: req.params.id}, (err, issue) => {
+        if (err)
+            res.json(err);
+        else
+            res.json('Removed successfully');
+    });
 });
 
 module.exports = router;
