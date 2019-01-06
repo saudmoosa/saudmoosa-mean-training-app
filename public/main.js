@@ -1127,10 +1127,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
-        this.uri = 'http://localhost:3000/'; //Local URI
+        //uri = 'http://localhost:3000/';  //Local URI
+        //uri = 'http://localhost:8080/';  //Local Prod
+        this.uri = ''; //Prod/Heroku  URI 
     }
-    //uri = 'http://localhost:8080/';  //Local Prod
-    //uri = '';  //Prod/Heroku  URI 
     AuthService.prototype.registerUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
@@ -1220,7 +1220,9 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var IssueService = /** @class */ (function () {
     function IssueService(http) {
         this.http = http;
-        this.uri = 'http://localhost:3000/'; //Local URI
+        //uri = 'http://localhost:3000/';  //Local URI
+        //uri = 'http://localhost:8080/';  //Local Prod
+        this.uri = ''; //Prod/Heroku  URI 
     }
     IssueService.prototype.loadToken = function () {
         var token = localStorage.getItem('id_token');
