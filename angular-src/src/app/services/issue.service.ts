@@ -9,9 +9,9 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class IssueService {
 
-  uri = 'http://localhost:3000/';  //Local URI
+  //uri = 'http://localhost:3000/';  //Local URI
   //uri = 'http://localhost:8080/';  //Local Prod
-  //uri = '';  //Prod/Heroku  URI 
+  uri = '';  //Prod/Heroku  URI 
 
   authToken: any;
 

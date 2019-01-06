@@ -24,8 +24,8 @@ const app = express();
 const users = require('./routes/users');
 
 //Port Number
-const port = 3000;  // For Local
-//const port = process.env.PORT || 8080;      //For Heroku/Prod
+//const port = 3000;  // For Local
+const port = process.env.PORT || 8080;      //For Heroku/Prod
 
 //Body Parser Middleware
 app.use(bodyParser.json());
