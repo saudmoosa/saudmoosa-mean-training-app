@@ -1,0 +1,11 @@
+.numberCircle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    background: rgb(199, 219, 217);
+    border: 2px solid #666;
+    color: rgb(17, 99, 6);
+    text-align: center;
+    font: 32px Arial, sans-serif;
+  }

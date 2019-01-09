@@ -30,7 +30,9 @@ import { CreateComponent } from './components/create/create.component';
 import { ListComponent } from './components/list/list.component';
 import { EditComponent } from './components/edit/edit.component';
 import { IssueService } from './services/issue.service';
+import { IssuestatsService } from './services/issuestats.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts'
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -77,9 +79,10 @@ const appRoutes: Routes = [
     MatDividerModule, 
     MatSnackBarModule,
     ReactiveFormsModule,
-    CdkTableModule    
+    CdkTableModule,
+    ChartsModule 
   ],
-  providers: [ValidateService, AuthService, AuthGuard, IssueService],
+  providers: [ValidateService, AuthService, AuthGuard, IssueService, IssuestatsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

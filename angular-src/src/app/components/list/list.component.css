@@ -1,5 +1,12 @@
-table {
-    width: 100%;
+.mat-table {
+  overflow: scroll;
+}
+
+.mat-row,
+.mat-header-row {
+  min-width: 1123px;
+  width: 100%;
+  width: max-content;
 }
 
 .mat-column-right {

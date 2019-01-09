@@ -127,4 +127,95 @@ router.get('/issues/delete/:id', passport.authenticate('jwt', {session: false}),
     });
 });
 
+
+// All Issues Count
+router.get('/issues-count', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+    Issue.aggregate([
+        { 
+            "$group" : {
+                "_id" : {
+
+                }, 
+                "COUNT(*)" : {
+                    "$sum" : 1.0
+                }
+            }
+        }, 
+        { 
+            "$project" : {
+                "total" : "$COUNT(*)", 
+                "_id" : 0.0
+            }
+        }
+    ], (err, issues) => {
+        if (err)
+            console.log(err);
+        else
+            res.json(issues);
+    }
+    );
+});
+
+
+
+// Issues Severity Count
+router.get('/issues-severity-count', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+    Issue.aggregate([
+        { 
+            "$group" : {
+                "_id" : {
+                    "severity" : "$severity"
+                }, 
+                "COUNT(*)" : {
+                    "$sum" : 1.0
+                }
+            }
+        }, 
+        { 
+            "$project" : {
+                "severity" : "$_id.severity", 
+                "total" : "$COUNT(*)", 
+                "_id" : 0.0
+            }
+        }
+    ], (err, issues) => {
+        if (err)
+            console.log(err);
+        else
+            res.json(issues);
+    }
+    );
+});
+
+
+// Issues Status Count
+router.get('/issues-status-count', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+    Issue.aggregate([
+        { 
+            "$group" : {
+                "_id" : {
+                    "status" : "$status"
+                }, 
+                "COUNT(*)" : {
+                    "$sum" : 1.0
+                }
+            }
+        }, 
+        { 
+            "$project" : {
+                "status" : "$_id.status", 
+                "total" : "$COUNT(*)", 
+                "_id" : 0.0
+            }
+        }
+    ], (err, issues) => {
+        if (err)
+            console.log(err);
+        else
+            res.json(issues);
+    }
+    );
+});
+
+
 module.exports = router;
