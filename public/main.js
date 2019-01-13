@@ -481,6 +481,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCardModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDividerModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatListModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
                 _angular_cdk_table__WEBPACK_IMPORTED_MODULE_7__["CdkTableModule"],
                 ng2_charts__WEBPACK_IMPORTED_MODULE_25__["ChartsModule"]
@@ -587,7 +588,7 @@ var CreateComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".numberCircle {\r\n    border-radius: 50%;\r\n    width: 100px;\r\n    height: 100px;\r\n    padding: 8px;\r\n    background: rgb(199, 219, 217);\r\n    border: 2px solid #666;\r\n    color: rgb(17, 99, 6);\r\n    text-align: center;\r\n    font: 32px Arial, sans-serif;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7SUFDbkIsYUFBYTtJQUNiLGNBQWM7SUFDZCxhQUFhO0lBQ2IsK0JBQStCO0lBQy9CLHVCQUF1QjtJQUN2QixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLDZCQUE2QjtHQUM5QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm51bWJlckNpcmNsZSB7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICB3aWR0aDogMTAwcHg7XHJcbiAgICBoZWlnaHQ6IDEwMHB4O1xyXG4gICAgcGFkZGluZzogOHB4O1xyXG4gICAgYmFja2dyb3VuZDogcmdiKDE5OSwgMjE5LCAyMTcpO1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgIzY2NjtcclxuICAgIGNvbG9yOiByZ2IoMTcsIDk5LCA2KTtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQ6IDMycHggQXJpYWwsIHNhbnMtc2VyaWY7XHJcbiAgfSJdfQ== */"
+module.exports = ".numberCircle {\r\n    border-radius: 50%;\r\n    width: 75px;\r\n    height: 75px;\r\n    padding: 8px;\r\n    background: lightgreen;\r\n    border: 2px solid #666;\r\n    color: rgb(17, 99, 6);\r\n    text-align: center;\r\n    font: 32px Arial, sans-serif;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLGFBQWE7SUFDYixhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLHVCQUF1QjtJQUN2QixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLDZCQUE2QjtHQUM5QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm51bWJlckNpcmNsZSB7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICB3aWR0aDogNzVweDtcclxuICAgIGhlaWdodDogNzVweDtcclxuICAgIHBhZGRpbmc6IDhweDtcclxuICAgIGJhY2tncm91bmQ6IGxpZ2h0Z3JlZW47XHJcbiAgICBib3JkZXI6IDJweCBzb2xpZCAjNjY2O1xyXG4gICAgY29sb3I6IHJnYigxNywgOTksIDYpO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udDogMzJweCBBcmlhbCwgc2Fucy1zZXJpZjtcclxuICB9Il19 */"
 
 /***/ }),
 
@@ -598,7 +599,7 @@ module.exports = ".numberCircle {\r\n    border-radius: 50%;\r\n    width: 100px
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<p class=\"lead\">Welcome to your dashboard</p>\n<p class=\"lead\">Saud Moosa - Practice Application</p>\n<mat-divider></mat-divider>\n<h2>Go ahead and check out all logged issues \n    <a class=\"btn btn-primary\" [routerLink]=\"['/list']\">List Issues</a></h2>\n\n<table>\n    <tr>\n        <td>\n            <h3>Total Issues logged: <div class=\"numberCircle\">{{allCount}}</div></h3>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <h3>\n                {{title_bar}}!\n            </h3>\n            \n            <div>\n                <canvas id=\"canvas_bar\" style=\"border:1px solid #000000;\" width=\"400\" height=\"300\"\n                    baseChart\n                    [chartType]=\"'bar'\"\n                    [datasets]=\"chartData_bar\"\n                    [labels]=\"labels_bar\"\n                    [options]=\"chartOptions_bar\"\n                    [legend]=\"true\"\n                    [colors]=\"colors_bar\"\n                    (chartClick)=\"onChartClick_bar($event)\">\n                </canvas>\n            </div>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <h3>\n                {{title_pie}}!\n            </h3>\n            \n            <div>\n                <canvas id=\"canvas_pie\" style=\"border:1px solid #000000;\" height=\"400\" width=\"400\"\n                    baseChart\n                    [chartType]=\"'pie'\"\n                    [datasets]=\"chartData_pie\"\n                    [labels]=\"labels_pie\"\n                    [options]=\"chartOptions_pie\"\n                    [legend]=\"true\"\n                    [colors]=\"colors_pie\"\n                    (chartClick)=\"onChartClick_pie($event)\">\n                </canvas>\n            </div>\n        </td>\n    </tr>\n</table>  "
+module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n<p class=\"lead\">Welcome to your dashboard</p>\n<p class=\"lead\">Saud Moosa - Practice Application</p>\n<mat-divider></mat-divider>\n<h2>Go ahead and check out all logged issues \n    <a class=\"btn btn-primary\" [routerLink]=\"['/list']\">List Issues</a></h2>\n\n<table>\n    <tr>\n        <td>\n            <h3>Total Issues logged: <div class=\"numberCircle\">{{allCount}}</div></h3>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <h3>\n                {{title_bar}}!\n            </h3>\n            \n            <div>\n                <canvas id=\"canvas_bar\" style=\"border:1px solid #000000;\" width=\"325\" height=\"250\"\n                    baseChart\n                    [chartType]=\"'bar'\"\n                    [datasets]=\"chartData_bar\"\n                    [labels]=\"labels_bar\"\n                    [options]=\"chartOptions_bar\"\n                    [legend]=\"true\"\n                    [colors]=\"colors_bar\"\n                    (chartClick)=\"onChartClick_bar($event)\">\n                </canvas>\n            </div>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <h3>\n                {{title_pie}}!\n            </h3>\n            \n            <div>\n                <canvas id=\"canvas_pie\" style=\"border:1px solid #000000;\" height=\"300\" width=\"300\"\n                    baseChart\n                    [chartType]=\"'pie'\"\n                    [datasets]=\"chartData_pie\"\n                    [labels]=\"labels_pie\"\n                    [options]=\"chartOptions_pie\"\n                    [legend]=\"true\"\n                    [colors]=\"colors_pie\"\n                    (chartClick)=\"onChartClick_pie($event)\">\n                </canvas>\n            </div>\n        </td>\n    </tr>\n</table>  "
 
 /***/ }),
 
@@ -639,7 +640,7 @@ var DashboardComponent = /** @class */ (function () {
         this.title_bar = 'Issues logged grouped by Severity';
         // ADD CHART OPTIONS. 
         this.chartOptions_bar = {
-            responsive: false,
+            responsive: true,
             scales: {
                 yAxes: [{
                         ticks: {
@@ -666,7 +667,7 @@ var DashboardComponent = /** @class */ (function () {
         this.title_pie = 'Issues logged grouped by Status';
         // ADD CHART OPTIONS. 
         this.chartOptions = {
-            responsive: false // TRUE WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
+            responsive: true // TRUE WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
         };
         this.labels_pie = [];
         // STATIC DATA FOR THE CHART IN JSON FORMAT.
@@ -865,7 +866,7 @@ var EditComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".list-logo img {\r\n    float: left;\r\n    width: 80px;\r\n    height: 50px;\r\n    border: 1px solid;\r\n    padding: 3px;\r\n  }\r\n\r\n.list-logo h4 {\r\nposition: relative;\r\nleft: 20px;\r\nbottom: 20px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixZQUFZO0lBQ1osYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixhQUFhO0dBQ2Q7O0FBRUg7QUFDQSxtQkFBbUI7QUFDbkIsV0FBVztBQUNYLGFBQWE7Q0FDWiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGlzdC1sb2dvIGltZyB7XHJcbiAgICBmbG9hdDogbGVmdDtcclxuICAgIHdpZHRoOiA4MHB4O1xyXG4gICAgaGVpZ2h0OiA1MHB4O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQ7XHJcbiAgICBwYWRkaW5nOiAzcHg7XHJcbiAgfVxyXG5cclxuLmxpc3QtbG9nbyBoNCB7XHJcbnBvc2l0aW9uOiByZWxhdGl2ZTtcclxubGVmdDogMjBweDtcclxuYm90dG9tOiAyMHB4O1xyXG59Il19 */"
+module.exports = ".list-logo img {\r\n    float: left;\r\n    width: 80px;\r\n    height: 50px;\r\n    border: 2px solid;\r\n    padding: 3px;\r\n    border-radius: 75%;\r\n  }\r\n\r\n.list-logo h4 {\r\nposition: relative;\r\nleft: 15px;\r\nbottom: 20px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixZQUFZO0lBQ1osYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsbUJBQW1CO0dBQ3BCOztBQUVIO0FBQ0EsbUJBQW1CO0FBQ25CLFdBQVc7QUFDWCxhQUFhO0NBQ1oiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmxpc3QtbG9nbyBpbWcge1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICB3aWR0aDogODBweDtcclxuICAgIGhlaWdodDogNTBweDtcclxuICAgIGJvcmRlcjogMnB4IHNvbGlkO1xyXG4gICAgcGFkZGluZzogM3B4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNzUlO1xyXG4gIH1cclxuXHJcbi5saXN0LWxvZ28gaDQge1xyXG5wb3NpdGlvbjogcmVsYXRpdmU7XHJcbmxlZnQ6IDE1cHg7XHJcbmJvdHRvbTogMjBweDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -876,7 +877,7 @@ module.exports = ".list-logo img {\r\n    float: left;\r\n    width: 80px;\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"jumbotron text-center\">\n  <h1>Issue Tracking Application</h1>\n  <p class=\"lead\">A \"M-E-A-N\" stack application with JSON web token authentication deployed on Heroku</p>\n</div>\n\n<div>\n  <h2>What goes into making this App</h2>&nbsp;\n  <ul class=\"list-logo\">\n    <li>\n        <img src=\"assets/images/nodejs-logo.png\" alt=\"nodejs\">&nbsp;\n        <h4>Node.Js : Asynchronous event driven JavaScript runtime on the server side</h4>&nbsp;\n    </li>\n    <li class=\"list-logo\">\n        <img src=\"assets/images/express-logo.png\" alt=\"express\">&nbsp;\n        <h4>Express : Web application framework for Node.js</h4>&nbsp;\n    </li>\n    <li class=\"list-logo\">\n        <img src=\"assets/images/mongodb-logo.png\" alt=\"mongodb\">&nbsp;\n        <h4>MongoDB : Document-oriented cloud database fully managed by MLabs that hosts MongoDB</h4>&nbsp;\n    </li>\n    <li class=\"list-logo\">\n        <img src=\"assets/images/angular-logo.png\" alt=\"angular\">&nbsp;\n        <h4>Angular 6 : A TypeScript-based open-source front-end web application framework used with Material design</h4>&nbsp;\n    </li>\n    <li class=\"list-logo\">\n        <img src=\"assets/images/passport-jwt-logo.jpeg\" alt=\"passport-jwt\">&nbsp;\n        <h4>Passport-JWT : Passport authentication middleware for Node.js with JSON web tokens strategy</h4>&nbsp;\n    </li>\n    <li class=\"list-logo\">\n        <img src=\"assets/images/github-logo.png\" alt=\"github\">&nbsp;\n        <h4>GitHub : A web-based hosting service for version control using Git where this code is publically available</h4>&nbsp;\n    </li>\n    <li class=\"list-logo\">\n        <img src=\"assets/images/heroku-logo.png\" alt=\"heroku\">&nbsp;\n        <h4>Heroku : A cloud platform as a service where this application is deployed with Continuous Integration from Git</h4>&nbsp;\n    </li>\n  </ul>\n</div>"
+module.exports = "\n<div class=\"jumbotron text-center\">\n  <h1>Issue Tracking Application</h1>\n  <p class=\"lead\">A \"M-E-A-N\" stack application with JSON web token authentication deployed on Heroku</p>\n  <p class=\"lead\">Resttful API's implemented for all CRUD operations performed on MongoDB</p>\n</div>\n\n<h3>What goes into making this Application:</h3>\n<mat-divider></mat-divider>\n<p></p>\n<div [@listAnimation]=\"techItems.length\">\n    <ul style=\"list-style-type:none\">\n        <li class=\"list-logo\" *ngFor=\"let item of techItems\">\n            <img [src]=\"item.img_src\" [alt]=\"item.alt\">&nbsp;\n            <h4>{{ item.heading }} : {{ item.desc }}</h4>&nbsp;\n        </li>\n    </ul>\n</div>\n"
 
 /***/ }),
 
@@ -891,6 +892,8 @@ module.exports = "\n<div class=\"jumbotron text-center\">\n  <h1>Issue Tracking 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _techlist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../techlist */ "./src/app/techlist.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -901,15 +904,37 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
+        this.techItems = [];
     }
     HomeComponent.prototype.ngOnInit = function () {
+        this.showItems();
+    };
+    HomeComponent.prototype.showItems = function () {
+        this.techItems = _techlist__WEBPACK_IMPORTED_MODULE_2__["default"];
     };
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-home',
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/components/home/home.component.html"),
+            animations: [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])('listAnimation', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])("* => *", [
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ transform: "translateX(600px)", opacity: 0 }),
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["stagger"])(1000, [
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('1s', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["keyframes"])([
+                                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ transform: "translateX(600px)", opacity: 0 }),
+                                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ transform: "translateX(0px)", opacity: 1 })
+                                ]))
+                            ])
+                        ], { optional: true })
+                    ])
+                ])
+            ],
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/components/home/home.component.css")]
         }),
         __metadata("design:paramtypes", [])
@@ -928,7 +953,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-table {\r\n  overflow: scroll;\r\n}\r\n\r\n.mat-row,\r\n.mat-header-row {\r\n  min-width: 1123px;\r\n  width: 100%;\r\n  width: -webkit-max-content;\r\n  width: -moz-max-content;\r\n  width: max-content;\r\n}\r\n\r\n.mat-column-right {\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQjs7QUFFRDs7RUFFRSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLDJCQUFtQjtFQUFuQix3QkFBbUI7RUFBbkIsbUJBQW1CO0NBQ3BCOztBQUVEO0lBQ0ksbUJBQW1CO0NBQ3RCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtdGFibGUge1xyXG4gIG92ZXJmbG93OiBzY3JvbGw7XHJcbn1cclxuXHJcbi5tYXQtcm93LFxyXG4ubWF0LWhlYWRlci1yb3cge1xyXG4gIG1pbi13aWR0aDogMTEyM3B4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHdpZHRoOiBtYXgtY29udGVudDtcclxufVxyXG5cclxuLm1hdC1jb2x1bW4tcmlnaHQge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */"
+module.exports = ".mat-table {\r\n  overflow: scroll;\r\n}\r\n\r\n.mat-row,\r\n.mat-header-row {\r\n  min-width: 1000px;\r\n  width: 100%;\r\n  width: -webkit-max-content;\r\n  width: -moz-max-content;\r\n  width: max-content;\r\n}\r\n\r\n.mat-column-right {\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQjs7QUFFRDs7RUFFRSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLDJCQUFtQjtFQUFuQix3QkFBbUI7RUFBbkIsbUJBQW1CO0NBQ3BCOztBQUVEO0lBQ0ksbUJBQW1CO0NBQ3RCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtdGFibGUge1xyXG4gIG92ZXJmbG93OiBzY3JvbGw7XHJcbn1cclxuXHJcbi5tYXQtcm93LFxyXG4ubWF0LWhlYWRlci1yb3cge1xyXG4gIG1pbi13aWR0aDogMTAwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHdpZHRoOiBtYXgtY29udGVudDtcclxufVxyXG5cclxuLm1hdC1jb2x1bW4tcmlnaHQge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -984,8 +1009,8 @@ var ListComponent = /** @class */ (function () {
             .getIssues()
             .subscribe(function (data) {
             _this.issues = data;
-            console.log('Data requested ...');
-            console.log(_this.issues);
+            //console.log('Data requested ...');
+            //console.log(this.issues);      
         });
     };
     ;
@@ -1503,6 +1528,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/index.js");
+/* harmony import */ var _uri_port__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../uri_port */ "./src/app/uri_port.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1517,12 +1543,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 //import 'rxjs/add/operator/map';
 
 
+
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
-        //uri = 'http://localhost:3000/';  //Local URI
-        //uri = 'http://localhost:8080/';  //Local Prod
-        this.uri = ''; //Prod/Heroku  URI 
+        this.uri = _uri_port__WEBPACK_IMPORTED_MODULE_4__["default"];
     }
     AuthService.prototype.registerUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
@@ -1598,6 +1623,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _uri_port__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../uri_port */ "./src/app/uri_port.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1610,12 +1636,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var IssueService = /** @class */ (function () {
     function IssueService(http) {
         this.http = http;
-        //uri = 'http://localhost:3000/';  //Local URI
-        //uri = 'http://localhost:8080/';  //Local Prod
-        this.uri = ''; //Prod/Heroku  URI 
+        this.uri = _uri_port__WEBPACK_IMPORTED_MODULE_3__["default"];
     }
     IssueService.prototype.loadToken = function () {
         var token = localStorage.getItem('id_token');
@@ -1702,6 +1727,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _uri_port__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../uri_port */ "./src/app/uri_port.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1714,12 +1740,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var IssuestatsService = /** @class */ (function () {
     function IssuestatsService(http) {
         this.http = http;
-        //uri = 'http://localhost:3000/';  //Local URI
-        //uri = 'http://localhost:8080/';  //Local Prod
-        this.uri = ''; //Prod/Heroku  URI 
+        this.uri = _uri_port__WEBPACK_IMPORTED_MODULE_3__["default"];
     }
     IssuestatsService.prototype.loadToken = function () {
         var token = localStorage.getItem('id_token');
@@ -1813,6 +1838,87 @@ var ValidateService = /** @class */ (function () {
     return ValidateService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/techlist.ts":
+/*!*****************************!*\
+  !*** ./src/app/techlist.ts ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var techList = [
+    {
+        heading: "Node.js",
+        desc: "Asynchronous event driven JavaScript runtime on the server side",
+        img_src: "assets/images/nodejs-logo.png",
+        alt: "nodejs"
+    },
+    {
+        heading: "Express",
+        desc: "Web application framework for Node.js",
+        img_src: "assets/images/express-logo.png",
+        alt: "express"
+    },
+    {
+        heading: "MongoDB",
+        desc: "Document-oriented cloud database fully managed by MLabs that hosts MongoDB",
+        img_src: "assets/images/mongodb-logo.png",
+        alt: "mongodb"
+    },
+    {
+        heading: "Angular 6",
+        desc: "A TypeScript-based open-source front-end web application framework used with Material design",
+        img_src: "assets/images/angular-logo.png",
+        alt: "angular"
+    },
+    {
+        heading: "Passport-JWT",
+        desc: "Passport authentication middleware for Node.js with JSON web tokens strategy",
+        img_src: "assets/images/passport-jwt-logo.jpeg",
+        alt: "passport-jwt"
+    },
+    {
+        heading: "Chart.js",
+        desc: "An open source library of JavaScript animated, interactive charts",
+        img_src: "assets/images/chartjs-logo.png",
+        alt: "chartjs"
+    },
+    {
+        heading: "GitHub",
+        desc: "A web-based hosting service for version control using Git where this code is publically available",
+        img_src: "assets/images/github-logo.png",
+        alt: "github"
+    },
+    {
+        heading: "Heroku",
+        desc: "A cloud platform as a service where this application is deployed with Continuous Integration from Git",
+        img_src: "assets/images/heroku-logo.png",
+        alt: "heroku"
+    }
+];
+/* harmony default export */ __webpack_exports__["default"] = (techList);
+
+
+/***/ }),
+
+/***/ "./src/app/uri_port.ts":
+/*!*****************************!*\
+  !*** ./src/app/uri_port.ts ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//const uri_port = 'http://localhost:3000/';  //Local URI
+//const uri_port = 'http://localhost:8080/';  //Local Prod
+var uri_port = ''; //Prod/Heroku  URI 
+/* harmony default export */ __webpack_exports__["default"] = (uri_port);
 
 
 /***/ }),

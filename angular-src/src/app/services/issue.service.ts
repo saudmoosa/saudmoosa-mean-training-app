@@ -3,15 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Http, Headers } from '@angular/http';
 import { map } from 'rxjs/operators';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import uri_port from './../uri_port';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IssueService {
 
-  //uri = 'http://localhost:3000/';  //Local URI
-  //uri = 'http://localhost:8080/';  //Local Prod
-  uri = '';  //Prod/Heroku  URI 
+  uri = uri_port; 
 
   authToken: any;
 

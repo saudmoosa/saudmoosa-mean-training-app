@@ -65,7 +65,7 @@ export class DashboardComponent implements OnInit {
 
     // ADD CHART OPTIONS. 
     chartOptions_bar = {
-    responsive: false,    // TRUE WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
+    responsive: true,    // TRUE WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
       scales: {             //Start chart from 0 on Y axis
         yAxes: [{
             ticks: {
@@ -104,7 +104,7 @@ export class DashboardComponent implements OnInit {
 
    // ADD CHART OPTIONS. 
    chartOptions = {
-    responsive: false    // TRUE WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
+    responsive: true    // TRUE WILL MAKE THE CHART RESPONSIVE (VISIBLE IN ANY DEVICE).
   }
 
   labels_pie = [];

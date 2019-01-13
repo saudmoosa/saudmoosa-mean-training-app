@@ -2,38 +2,17 @@
 <div class="jumbotron text-center">
   <h1>Issue Tracking Application</h1>
   <p class="lead">A "M-E-A-N" stack application with JSON web token authentication deployed on Heroku</p>
+  <p class="lead">Resttful API's implemented for all CRUD operations performed on MongoDB</p>
 </div>
 
-<div>
-  <h2>What goes into making this App</h2>&nbsp;
-  <ul class="list-logo">
-    <li>
-        <img src="assets/images/nodejs-logo.png" alt="nodejs">&nbsp;
-        <h4>Node.Js : Asynchronous event driven JavaScript runtime on the server side</h4>&nbsp;
-    </li>
-    <li class="list-logo">
-        <img src="assets/images/express-logo.png" alt="express">&nbsp;
-        <h4>Express : Web application framework for Node.js</h4>&nbsp;
-    </li>
-    <li class="list-logo">
-        <img src="assets/images/mongodb-logo.png" alt="mongodb">&nbsp;
-        <h4>MongoDB : Document-oriented cloud database fully managed by MLabs that hosts MongoDB</h4>&nbsp;
-    </li>
-    <li class="list-logo">
-        <img src="assets/images/angular-logo.png" alt="angular">&nbsp;
-        <h4>Angular 6 : A TypeScript-based open-source front-end web application framework used with Material design</h4>&nbsp;
-    </li>
-    <li class="list-logo">
-        <img src="assets/images/passport-jwt-logo.jpeg" alt="passport-jwt">&nbsp;
-        <h4>Passport-JWT : Passport authentication middleware for Node.js with JSON web tokens strategy</h4>&nbsp;
-    </li>
-    <li class="list-logo">
-        <img src="assets/images/github-logo.png" alt="github">&nbsp;
-        <h4>GitHub : A web-based hosting service for version control using Git where this code is publically available</h4>&nbsp;
-    </li>
-    <li class="list-logo">
-        <img src="assets/images/heroku-logo.png" alt="heroku">&nbsp;
-        <h4>Heroku : A cloud platform as a service where this application is deployed with Continuous Integration from Git</h4>&nbsp;
-    </li>
-  </ul>
+<h3>What goes into making this Application:</h3>
+<mat-divider></mat-divider>
+<p></p>
+<div [@listAnimation]="techItems.length">
+    <ul style="list-style-type:none">
+        <li class="list-logo" *ngFor="let item of techItems">
+            <img [src]="item.img_src" [alt]="item.alt">&nbsp;
+            <h4>{{ item.heading }} : {{ item.desc }}</h4>&nbsp;
+        </li>
+    </ul>
 </div>

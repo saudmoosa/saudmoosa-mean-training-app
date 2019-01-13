@@ -25,8 +25,8 @@ export class ListComponent implements OnInit {
       .getIssues()
       .subscribe((data: Issue[]) => {
         this.issues = data;
-        console.log('Data requested ...');
-        console.log(this.issues);      
+        //console.log('Data requested ...');
+        //console.log(this.issues);      
       });     
   };
 

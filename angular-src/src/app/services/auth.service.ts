@@ -3,6 +3,7 @@ import { Http, Headers } from '@angular/http';
 //import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import uri_port from './../uri_port';
 
 
 @Injectable({
@@ -14,9 +15,7 @@ export class AuthService {
 
   constructor(private http: Http) { }
 
-  //uri = 'http://localhost:3000/';  //Local URI
-  //uri = 'http://localhost:8080/';  //Local Prod
-  uri = '';  //Prod/Heroku  URI 
+  uri = uri_port;
 
   registerUser(user){
     let headers = new Headers();

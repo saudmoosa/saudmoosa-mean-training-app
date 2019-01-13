@@ -4,7 +4,7 @@
 
 .mat-row,
 .mat-header-row {
-  min-width: 1123px;
+  min-width: 1000px;
   width: 100%;
   width: max-content;
 }
