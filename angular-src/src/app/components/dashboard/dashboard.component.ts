@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
       .getAllIssuesCount()
       .subscribe((data) => {
         this.allCount = data[0].total;
-        console.log(this.allCount);      
+        //console.log(this.allCount);      
       });     
   };
 
