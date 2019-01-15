@@ -11,9 +11,9 @@ import techList from './../../techlist';
        transition("* => *",[
         query(':enter', [
          style({transform:"translateX(600px)", opacity: 0}),
-         stagger(1000, [
+         stagger('0.5s', [
           animate(
-            '1s',keyframes([
+            '0.5s',keyframes([
               style({transform:"translateX(600px)", opacity: 0}),
               style({transform:"translateX(0px)", opacity: 1})
       

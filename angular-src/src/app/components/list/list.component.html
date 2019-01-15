@@ -5,24 +5,29 @@
     <br><br>
     <mat-divider></mat-divider>
     <br>
-    <mat-table #table [dataSource]="issues">
-      <ng-container matColumnDef="title">
-        <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+    
+    <mat-table #table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="title" sticky>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Title</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>        
       </ng-container>
 
       <ng-container matColumnDef="responsible">
-        <mat-header-cell *matHeaderCellDef>Responsible</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Responsible</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.responsible}} </mat-cell>        
       </ng-container>
 
       <ng-container matColumnDef="severity">
-        <mat-header-cell *matHeaderCellDef>Severity</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Severity</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.severity}} </mat-cell>        
       </ng-container>
 
       <ng-container matColumnDef="status">
-        <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>        
       </ng-container>
 

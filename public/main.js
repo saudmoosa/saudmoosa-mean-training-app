@@ -471,6 +471,7 @@ var AppModule = /** @class */ (function () {
                 ng_flash_messages__WEBPACK_IMPORTED_MODULE_16__["NgFlashMessagesModule"].forRoot(),
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_24__["BrowserAnimationsModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSortModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatFormFieldModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"],
@@ -877,7 +878,7 @@ module.exports = ".list-logo img {\r\n    float: left;\r\n    width: 80px;\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"jumbotron text-center\">\n  <h1>Issue Tracking Application</h1>\n  <p class=\"lead\">A \"M-E-A-N\" stack application with JSON web token authentication deployed on Heroku</p>\n  <p class=\"lead\">Resttful API's implemented for all CRUD operations performed on MongoDB</p>\n</div>\n\n<h3>What goes into making this Application:</h3>\n<mat-divider></mat-divider>\n<p></p>\n<div [@listAnimation]=\"techItems.length\">\n    <ul style=\"list-style-type:none\">\n        <li class=\"list-logo\" *ngFor=\"let item of techItems\">\n            <img [src]=\"item.img_src\" [alt]=\"item.alt\">&nbsp;\n            <h4>{{ item.heading }} : {{ item.desc }}</h4>&nbsp;\n        </li>\n    </ul>\n</div>\n"
+module.exports = "\n<div class=\"jumbotron text-center\">\n  <h1>Issue Tracking Application</h1>\n  <p class=\"lead\">A \"M-E-A-N\" stack application with JSON web token authentication deployed on Heroku</p>\n  <p class=\"lead\">Restful API's implemented for all CRUD operations performed on MongoDB</p>\n</div>\n\n<h3>What goes into making this Application:</h3>\n<mat-divider></mat-divider>\n<p></p>\n<div [@listAnimation]=\"techItems.length\">\n    <ul style=\"list-style-type:none\">\n        <li class=\"list-logo\" *ngFor=\"let item of techItems\">\n            <img [src]=\"item.img_src\" [alt]=\"item.alt\">&nbsp;\n            <h4>{{ item.heading }} : {{ item.desc }}</h4>&nbsp;\n        </li>\n    </ul>\n</div>\n"
 
 /***/ }),
 
@@ -925,8 +926,8 @@ var HomeComponent = /** @class */ (function () {
                     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])("* => *", [
                         Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', [
                             Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ transform: "translateX(600px)", opacity: 0 }),
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["stagger"])(1000, [
-                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('1s', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["keyframes"])([
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["stagger"])('0.5s', [
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('0.5s', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["keyframes"])([
                                     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ transform: "translateX(600px)", opacity: 0 }),
                                     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ transform: "translateX(0px)", opacity: 1 })
                                 ]))
@@ -953,7 +954,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-table {\r\n  overflow: scroll;\r\n}\r\n\r\n.mat-row,\r\n.mat-header-row {\r\n  min-width: 1000px;\r\n  width: 100%;\r\n  width: -webkit-max-content;\r\n  width: -moz-max-content;\r\n  width: max-content;\r\n}\r\n\r\n.mat-column-right {\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQjs7QUFFRDs7RUFFRSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLDJCQUFtQjtFQUFuQix3QkFBbUI7RUFBbkIsbUJBQW1CO0NBQ3BCOztBQUVEO0lBQ0ksbUJBQW1CO0NBQ3RCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtdGFibGUge1xyXG4gIG92ZXJmbG93OiBzY3JvbGw7XHJcbn1cclxuXHJcbi5tYXQtcm93LFxyXG4ubWF0LWhlYWRlci1yb3cge1xyXG4gIG1pbi13aWR0aDogMTAwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHdpZHRoOiBtYXgtY29udGVudDtcclxufVxyXG5cclxuLm1hdC1jb2x1bW4tcmlnaHQge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */"
+module.exports = ".mat-table {\r\n  overflow: scroll;\r\n}\r\n\r\n.mat-row,\r\n.mat-header-row {\r\n  min-width: 1000px;\r\n  width: 100%;\r\n  width: -webkit-max-content;\r\n  width: -moz-max-content;\r\n  width: max-content;\r\n}\r\n\r\n.mat-column-right {\r\n    text-align: center;\r\n}\r\n\r\n.mat-table-sticky:first-child {\r\n  border-right: 1px solid #e0e0e0;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQjs7QUFFRDs7RUFFRSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLDJCQUFtQjtFQUFuQix3QkFBbUI7RUFBbkIsbUJBQW1CO0NBQ3BCOztBQUVEO0lBQ0ksbUJBQW1CO0NBQ3RCOztBQUVEO0VBQ0UsZ0NBQWdDO0NBQ2pDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9saXN0L2xpc3QuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtdGFibGUge1xyXG4gIG92ZXJmbG93OiBzY3JvbGw7XHJcbn1cclxuXHJcbi5tYXQtcm93LFxyXG4ubWF0LWhlYWRlci1yb3cge1xyXG4gIG1pbi13aWR0aDogMTAwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHdpZHRoOiBtYXgtY29udGVudDtcclxufVxyXG5cclxuLm1hdC1jb2x1bW4tcmlnaHQge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcblxyXG4ubWF0LXRhYmxlLXN0aWNreTpmaXJzdC1jaGlsZCB7XHJcbiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2UwZTBlMDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -964,7 +965,7 @@ module.exports = ".mat-table {\r\n  overflow: scroll;\r\n}\r\n\r\n.mat-row,\r\n.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <br>\n  <mat-card>\n    <button mat-raised-button color=\"primary\" routerLink=\"/create\">Create New Issue</button>\n    <br><br>\n    <mat-divider></mat-divider>\n    <br>\n    <mat-table #table [dataSource]=\"issues\">\n      <ng-container matColumnDef=\"title\">\n        <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\"> {{element.title}} </mat-cell>        \n      </ng-container>\n\n      <ng-container matColumnDef=\"responsible\">\n        <mat-header-cell *matHeaderCellDef>Responsible</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\"> {{element.responsible}} </mat-cell>        \n      </ng-container>\n\n      <ng-container matColumnDef=\"severity\">\n        <mat-header-cell *matHeaderCellDef>Severity</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\"> {{element.severity}} </mat-cell>        \n      </ng-container>\n\n      <ng-container matColumnDef=\"status\">\n        <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\"> {{element.status}} </mat-cell>        \n      </ng-container>\n\n      <ng-container matColumnDef=\"actions\">\n        <mat-header-cell *matHeaderCellDef class=\"mat-column-right\">Actions</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"mat-column-right\"> \n          <button mat-button color=\"primary\" (click)=\"editIssue(element._id)\"><i class=\"material-icons\">edit</i></button>\n          <button mat-button color=\"warn\" (click)=\"deleteIssue(element._id)\"><i class=\"material-icons\">delete</i></button>\n        </mat-cell>        \n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n     \n    </mat-table>\n  </mat-card>\n</div>"
+module.exports = "<div>\n  <br>\n  <mat-card>\n    <button mat-raised-button color=\"primary\" routerLink=\"/create\">Create New Issue</button>\n    <br><br>\n    <mat-divider></mat-divider>\n    <br>\n    <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field>\n    \n    <mat-table #table [dataSource]=\"dataSource\" matSort>\n\n      <ng-container matColumnDef=\"title\" sticky>\n        <mat-header-cell *matHeaderCellDef mat-sort-header>Title</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\"> {{element.title}} </mat-cell>        \n      </ng-container>\n\n      <ng-container matColumnDef=\"responsible\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>Responsible</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\"> {{element.responsible}} </mat-cell>        \n      </ng-container>\n\n      <ng-container matColumnDef=\"severity\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>Severity</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\"> {{element.severity}} </mat-cell>        \n      </ng-container>\n\n      <ng-container matColumnDef=\"status\">\n        <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\"> {{element.status}} </mat-cell>        \n      </ng-container>\n\n      <ng-container matColumnDef=\"actions\">\n        <mat-header-cell *matHeaderCellDef class=\"mat-column-right\">Actions</mat-header-cell>\n        <mat-cell *matCellDef=\"let element\" class=\"mat-column-right\"> \n          <button mat-button color=\"primary\" (click)=\"editIssue(element._id)\"><i class=\"material-icons\">edit</i></button>\n          <button mat-button color=\"warn\" (click)=\"deleteIssue(element._id)\"><i class=\"material-icons\">delete</i></button>\n        </mat-cell>        \n      </ng-container>\n\n      <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n      <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n     \n    </mat-table>\n  </mat-card>\n</div>"
 
 /***/ }),
 
@@ -981,6 +982,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_issue_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/issue.service */ "./src/app/services/issue.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -993,15 +995,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ListComponent = /** @class */ (function () {
     function ListComponent(issueService, router) {
         this.issueService = issueService;
         this.router = router;
-        //issues;
         this.displayedColumns = ['title', 'responsible', 'severity', 'status', 'actions'];
     }
     ListComponent.prototype.ngOnInit = function () {
         this.fetchIssues();
+    };
+    ListComponent.prototype.applyFilter = function (filterValue) {
+        this.dataSource.filter = filterValue.trim().toLowerCase();
     };
     ListComponent.prototype.fetchIssues = function () {
         var _this = this;
@@ -1009,8 +1014,8 @@ var ListComponent = /** @class */ (function () {
             .getIssues()
             .subscribe(function (data) {
             _this.issues = data;
-            //console.log('Data requested ...');
-            //console.log(this.issues);      
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableDataSource"](_this.issues);
+            _this.dataSource.sort = _this.sort;
         });
     };
     ;
@@ -1025,6 +1030,10 @@ var ListComponent = /** @class */ (function () {
         });
     };
     ;
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSort"]),
+        __metadata("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSort"])
+    ], ListComponent.prototype, "sort", void 0);
     ListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-list',
