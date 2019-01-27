@@ -32,10 +32,12 @@ import { EditComponent } from './components/edit/edit.component';
 import { IssueService } from './services/issue.service';
 import { IssuestatsService } from './services/issuestats.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ChartsModule } from 'ng2-charts'
+import { ChartsModule } from 'ng2-charts';
+import { DevprofileComponent } from './components/devprofile/devprofile.component'
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'devprofile', component: DevprofileComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
@@ -57,7 +59,8 @@ const appRoutes: Routes = [
     ProfileComponent,
     CreateComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    DevprofileComponent
   ],
   imports: [
     BrowserModule,
